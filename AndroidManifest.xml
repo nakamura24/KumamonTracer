@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.kumamontracer"
+    android:versionCode="1"
+    android:versionName="1.0.0" 
+    android:installLocation="auto">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:allowBackup="true">
+        <uses-library android:name="com.google.android.maps" />
+        <service
+            android:name=".KumamonLiveWall3"
+            android:label="@string/KumamonLiveWall3"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data 
+                android:name="android.service.wallpaper" 
+                android:resource="@xml/wallpaper3" />
+        </service>
+        <service android:name=".GPSTraceService" />
+        <activity
+            android:name=".TracerMap"
+            android:label="@string/kumamon_tracer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TracerListDialog"
+            android:theme="@style/Theme.Dialog"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="jp.kumamontracer.DIALOG" />
+            </intent-filter>
+        </activity>
+	</application>
+
+</manifest>

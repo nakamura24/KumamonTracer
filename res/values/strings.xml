@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">くまモンライブ壁紙</string>
+    <string name="kumamon_tracer">Google Maps Location Tracer</string>
+    <string name="KumamonLiveWall3">くまモンライブ壁紙</string>
+	<!-- <string name="maps_api_key">0YaH0OqXXtKV_OrT7dCrvuxQnQ3cfTp8i2u3BsA</string> -->
+    <string name="maps_api_key">0YaH0OqXXtKXyEllm2cOfYgFOOjv35k5Twtb_QA</string>
+    <string name="description3">肥後六花とくまモン、GO!GO!くまモンです。ダブルタップで画像が替わります</string>
+    <string name="OKButton">OK</string>
+    <string name="button1">一覧</string>
+    <string name="button2">クリア</string>
+    
+</resources>
